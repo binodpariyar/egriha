@@ -1,0 +1,15 @@
+/*
+		 * Required 
+		*/
+		.container { width:282px; height:195px; overflow:hidden; position:relative; cursor:pointer; }
+		.slides { position:absolute; top:0; left:0; }
+		.slides div { position:absolute; top:0; width:280px; display:none; }
+		.slides div img{border:1px solid #c4c4c4; padding:4px;}
+		/*
+		 * Optional
+		*/
+		#loopedSlider, #newsSlider { margin:0 auto; width:282px; position:relative;}
+		.pagination ul{list-style:none; padding:0; margin:0; overflow:hidden; width:282px; }
+		.pagination ul li  { float:left; margin:0; list-style:none;}
+		.pagination ul li a { padding:5px; }
+		.pagination ul li.active a { background:#b3c90c; color:white; }

@@ -1,0 +1,26 @@
+/* reset */
+@import url("reset.css");
+
+/* typography styles */
+@import url("typo.css");
+
+/* form elements */
+@import url("forms.css");
+
+/* main layout */
+@import url("layout.css");
+
+/* navigation */
+@import url("menus.css");
+
+/* prettyPhoto */
+@import url("prettyPhoto.css");
+
+/* Sidebar Slideshow */
+@import url("sidebarslider.css");
+
+/* Binod Files */
+@import url("binod.css");
+
+/* Abiral chamdiya Files */
+@import url("abiral.css");

@@ -1,0 +1,112 @@
+/*==================================TOP SEARCH FORM
+*/
+#header fieldset{
+	float:right;
+	padding-top:0px;
+	overflow:hidden;
+	border: 0px;
+
+
+}
+#header fieldset p
+{
+	font-family: arial;
+	color:#DCA619;
+}
+#header fieldset .search{
+	background:url(../images/top_search_bg.png) no-repeat;
+	width:197px;
+	height:23px;
+	border:none;
+	color:#323232;
+	padding:2px;
+	float:left;
+	margin-right:5px;
+}
+#header fieldset .searchBtn{
+	background: url(../images/a_top_search_btn.png) no-repeat;
+  width: 91px;
+  height: 27px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+/*==================================BLOG COMMENT FORM
+*/
+#commentform{
+}
+#commentform .submit{
+	background:#adc309;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	text-align:center;
+	width:80px;
+	height:25px;
+	line-height:25px;
+	border:none;
+}
+#respond input{
+	height:25px;
+}
+#respond textarea{
+	width:500px;
+}
+#respond input, #respond textarea{
+	border:1px solid #d2d2d2;
+	font-size:11px;
+	color:#505050;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/*==================================CONTACT FORM
+*/
+.entry label {
+	display:block;
+	float:none;
+	width:auto;
+	font-family: arial;
+	font-size: 16px;
+}
+
+.entry input[type="radio"]{
+	height: 13px !important;
+}
+
+form#contactform input {
+	border:1px solid #d2d2d2;
+	font-size:11px;
+	color:#505050;
+	font-family:Arial, Helvetica, sans-serif;
+	height:25px;
+	margin-bottom: 10px;
+}
+form#contactform textarea {
+	border:1px solid #d2d2d2;
+	font-size:11px;
+	color:#505050;
+	font-family:Arial, Helvetica, sans-serif; 
+width:400px;
+}
+form#contactform .submit{
+	background:#d4a619;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	text-align:center;
+	width:80px;
+	height:25px;
+	line-height:25px;
+	border:none;
+}
+.error{
+	color:#FF0000;
+}
+.success{
+	color:#009900;
+}
