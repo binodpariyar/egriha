@@ -13,9 +13,6 @@ application/logs/*
 /application/cache/*
 /application/logs/*
 /application/config/database.php
-/application/third_party/PHPExcel/*
-/filebox/missing/*
-gen-modules/*
 documents/
 .idea/
 .projects/
@@ -34,5 +31,3 @@ nbdist/
 *.tmPreferences.cache
 *.stTheme.cache
 *.sublime-workspace
-/assets/css/jqwidgets/styles/compresscss.php
-/assets/css/jqwidgets/styles/yuicompressor-2.4.8.jar
