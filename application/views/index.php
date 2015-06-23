@@ -206,8 +206,6 @@
 
   $(document).ready(function() { 
 
-<<<<<<< HEAD
-
 
     $('a.colorbox-iframe').colorbox({
 
@@ -218,14 +216,6 @@
       });
 
 
-
-=======
-    $('a.colorbox-iframe').colorbox({
-        width:'60%',
-        height:'90%'
-      });
-
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
     $('#selling').bxSlider({
 
       minSlides: 5,
