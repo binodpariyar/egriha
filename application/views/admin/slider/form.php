@@ -29,13 +29,13 @@ if(isset($edit)){
                     </div>
                 </div>
                 
-                <div class="row" style="margin-top: 15px;">
+<!--                 <div class="row" style="margin-top: 15px;">
                     <div class="col-md-12">
                         <label>Description:</label> 
                         <textarea name="description" class="editor"><?php echo (isset($edit->description))? $edit->description :set_value('description'); ?></textarea>
                         <label for="image" class="error"><?php echo form_error('description'); ?></label>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row" style="margin-top: 15px;">
                     <div class="col-md-12">
