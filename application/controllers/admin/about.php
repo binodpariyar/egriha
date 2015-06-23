@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-class About extends Admin_Controller {
-
-	public function __construct(){
-		parent::__construct();
-	}
-
-	public function index()
-	{
-		$data['main'] = 'about/form';
-		$data['heading'] = 'About Us';
-		$this->load->view('admin/home',$data);
-	}
-	
-
-=======
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class About extends Admin_Controller {
@@ -55,6 +37,4 @@ class About extends Admin_Controller {
 		redirect(admin_url('about/'.$slug));
 	}
 
-
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
 }

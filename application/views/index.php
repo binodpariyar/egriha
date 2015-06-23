@@ -13,13 +13,9 @@
   <link href="<?php echo base_url(); ?>front_assets/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
 
   <link href="<?php echo base_url(); ?>front_assets/css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="screen" />
-<<<<<<< HEAD
 
   <link href="<?php echo base_url(); ?>front_assets/css/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
 
-=======
-  <link href="<?php echo base_url(); ?>front_assets/css/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
   <style>
 
   .form-field{
@@ -45,13 +41,9 @@
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/Calluna_400.font.js"></script>
 
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/jquery.bxslider.js"></script>
-<<<<<<< HEAD
 
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/jquery.colorbox.js"></script>
 
-=======
-  <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/jquery.colorbox.js"></script>
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
   <script type="text/javascript">
 
   Cufon.replace('h1.html');
@@ -481,13 +473,7 @@
            <div class="form-field">
 
             <label for="country"><strong>To:</strong></label>
-<<<<<<< HEAD
-
             <select id="type" required="required">
-
-=======
-            <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
               <option>Buy</option>
 
               <option>Rent</option>
@@ -501,13 +487,8 @@
           <div class="form-field">
 
             <label for="country"><strong>Property:</strong></label>
-<<<<<<< HEAD
 
             <select id="type" required="required">
-
-=======
-            <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
               <option>House</option>
 
               <option>Land</option>
@@ -527,13 +508,8 @@
           <div class="form-field">
 
             <label for="country"><strong>Area:</strong></label>
-<<<<<<< HEAD
 
             <select id="type" required="required">
-
-=======
-            <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
               <option>House</option>
 
               <option>Land</option>
@@ -553,13 +529,9 @@
           <div class="form-field">
 
             <label for="country"><strong>Location:</strong></label>
-<<<<<<< HEAD
 
             <select id="type" required="required">
 
-=======
-            <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
               <option>House</option>
 
               <option>Land</option>
@@ -579,13 +551,7 @@
           <div class="form-field">
 
             <label for="country"><strong>Price Range:</strong></label>
-<<<<<<< HEAD
-
             <select id="type" required="required">
-
-=======
-            <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
               <option>House</option>
 
               <option>Land</option>
@@ -793,46 +759,15 @@
             <div class="clear-both">
 
               <div class="margin-right">
-
-<<<<<<< HEAD
-
-
-                <label>For:</label>
-
-                <select id="type" required="required">
-
-                  <option>Sell</option>
-
-                  <option>Rent</option>
-
-                  <!-- <option>Appartment</option> -->
-
-=======
                 <label>For:</label>
                 <select id="type" required="required">
                   <option>Sell</option>
                   <option>Rent</option>
-                  <!-- <option>Appartment</option> -->
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
                 </select>
 
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
                 <label>Of:</label>
 
                 <select id="type" required="required">
-
-=======
-                <label>Of:</label>
-                <select id="type" required="required">
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
                  <option>Home</option>
 
                  <option>Land</option>
@@ -938,13 +873,7 @@
             <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
 
           </li>
-<<<<<<< HEAD
 
-=======
-          <li>
-            <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
-          </li>
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
         </ul>
 
       </li>
@@ -976,10 +905,6 @@
             <a href="<?php echo site_url('sell/appartment'); ?>">Appartment</a>
 
           </li>
-<<<<<<< HEAD
-
-=======
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
         </ul>
 
       </li>
@@ -1255,60 +1180,6 @@
 
     </div><!--Wrap ends -->
 
-    
-<<<<<<< HEAD
-
-    <?php $site_setting = $this->db->get('tbl_site')->row(); ?>
-
-    <ul class="social" id="share">
-
-      <li id="facebook"><a target="_blank" href="<?php echo $site_setting->facebook; ?>">Facebook</a></li>
-
-      <li id="twitter"><a target="_blank" href="<?php echo $site_setting->twitter; ?>">Twitter</a></li>
-
-      <li id="gplus"><a target="_blank" href="<?php echo $site_setting->google; ?>">Google+</a></li>
-
-    </ul>
-
-
-
-    <script>
-
-
-
-    $(window).scroll(function(){
-
-      checkScroll();
-
-    });
-
-
-
-    function checkScroll(){
-
-      if($(this).scrollTop() > 150 ){
-
-        $('#top').fadeIn();
-
-        $('#share').fadeIn();
-
-      }else{
-
-        $('#top').fadeOut();
-
-        $('#share').fadeOut();
-
-      }
-
-    }
-
-
-
-    </script>
-
-
-
-=======
     <?php $site_setting = $this->db->get('tbl_site')->row(); ?>
     <ul class="social" id="share">
       <li id="facebook"><a target="_blank" href="<?php echo $site_setting->facebook; ?>">Facebook</a></li>
@@ -1333,8 +1204,6 @@
     }
 
     </script>
-
->>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
   </body>
 
 <!--    <ul class="social" id="share">
