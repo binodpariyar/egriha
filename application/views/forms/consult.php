@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="content_form">
 	<h2>Fill the form below we will help you out</h2>
 	<div class="entry">
@@ -47,4 +48,8 @@
 
 		</div>
 	</div>
+=======
+<div style="width:60%;margin:150px auto;">
+	<h3>To consult with us <a href="<?php echo site_url('contact'); ?>">Contact Us</a></h3>
+>>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
 </div>

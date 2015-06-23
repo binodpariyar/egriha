@@ -61,5 +61,25 @@ class Home extends CI_Controller {
 		$this->load->view('index',$data);
 	}
 
+<<<<<<< HEAD
+=======
+	public function request()
+	{
+		$data['main'] = 'forms/request';
+		$this->load->view('temp',$data);
+	}
+
+	public function consult()
+	{
+		$data['main'] = 'forms/consult';
+		$this->load->view('temp',$data);
+	}
+
+	public function service()
+	{
+		$data['main'] = 'forms/service';
+		$this->load->view('temp',$data);
+	}
+>>>>>>> cba332da7c5b3e069bcb1525a7974f4bf1fed1c5
 
 }
