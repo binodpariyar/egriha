@@ -1,0 +1,38 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 23, 2015 at 04:36 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `grihanepal`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_content`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `body` text NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_content`
+--
+
+INSERT INTO `tbl_content` (`id`, `title`, `body`, `slug`) VALUES
+(1, 'Vastushastra', 'Vastushastra Vastushastra Vastushastra Vastushastra', 'vastushastra'),
+(2, 'Construction', '<h1 class="page-header">Construction</h1>\n<h1 class="page-header">Construction</h1>', 'construction'),
+(3, 'About Us', 'About Us About Us About Us About Us', 'about-us');

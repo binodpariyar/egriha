@@ -1,4 +1,9 @@
-
+<style>
+  select{
+    width: 80%;
+    padding: 5px;
+  }
+</style>
 <div id="content_form">
   <h2>Fill the form below we will help you out</h2>
   <div class="entry">
@@ -40,7 +45,7 @@
 
 
 
-     <div class="form-field">
+     <div >
 
       <label for="country"><strong>To:</strong></label>
 
@@ -56,7 +61,7 @@
 
 
 
-    <div class="form-field">
+    <div >
 
       <label for="country"><strong>Property:</strong></label>
 
@@ -78,11 +83,13 @@
 
 
 
-    <div class="form-field">
+    <div>
 
       <label for="country"><strong>Area:</strong></label>
 
-      <select id="type" required="required">
+      <input type="text" size="50" name="area" id="area" value="" required="required" />
+
+<!--       <select id="type" required="required">
 
         <option>House</option>
 
@@ -94,13 +101,13 @@
 
         <option>Other Specify</option>
 
-      </select>
+      </select> -->
 
     </div>
 
     
 
-    <div class="form-field">
+    <div>
 
       <label for="country"><strong>Location:</strong></label>
 
@@ -110,7 +117,7 @@
 
 
 
-    <div class="form-field">
+    <div>
 
       <label for="country"><strong>Price Range:</strong></label>
 
@@ -140,9 +147,7 @@
 
    </div>
 
-
-
-   <div style="margin-top:10px;">
+   <div>
 
      <input type="submit" class="submit" value="Submit" name="Submit" />
 

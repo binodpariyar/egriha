@@ -21,9 +21,8 @@ class Site_management extends Admin_Controller {
 		$data['google']=$this->input->post('google');
 		$data['twitter']=$this->input->post('twitter');
 		$data['youtube']=$this->input->post('youtube');
-		// $this->db->where()
-		 $this->db->update('tbl_site', $data);
-		 redirect(admin_url('Site_management'));
+		$this->db->update('tbl_site', $data);
+		redirect(admin_url('site_management'));
 	}
 
 }
