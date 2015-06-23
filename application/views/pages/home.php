@@ -2,18 +2,12 @@
 
 <div id="s3slider">
  <ul id="s3sliderContent">
+  <?php $slides = $this->db->order_by('order')->get('tbl_slider')->result(); ?>
+  <?php foreach($slides as $slide){ ?>
   <li>
-    <img src="<?php echo base_url() ?>front_assets/images/slide_3.jpg" alt="" />
+    <img src="<?php echo base_url() ?>timthumb.php?h=277&w=940&q=100&src=<?php echo base_url('uploads/slider_image/'.$slide->image);?>">
   </li>
-  <li>
-    <img src="<?php echo base_url() ?>front_assets/images/slide_05.jpg" alt="" />
-  </li>
-  <li>
-    <img src="<?php echo base_url() ?>front_assets/images/slide_01.jpg" alt="" />
-  </li>
-  <li>
-    <img src="<?php echo base_url() ?>front_assets/images/slider_4.jpg" alt="" />
-  </li>
+  <?php } ?>
 </ul>
 </div>
 
@@ -47,35 +41,14 @@
 
        <div class="ad margin-up">
         <ul class="ads_slider">
+          <?php $ads = $this->db->order_by('order')->get('tbl_advertisement')->result(); ?>
+          <?php foreach($ads as $ad){ ?>
           <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint.jpg');?>">
-
+            <a href="<?php echo prep_url($ad->link); ?>" target="_blank">
+              <img src="<?php echo base_url() ?>timthumb.php?h=300&w=300&q=100&src=<?php echo base_url('uploads/advertisement_image/'.$ad->image);?>">
+            </a>
           </li>
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-          </li>
-
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-          </li>
-
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint4.jpg');?>">
-
-          </li>
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-          </li>
-
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-          </li>
-
-          <li>
-            <img src="<?php echo base_url('front_assets/images/asianpaint4.jpg');?>">
-
-          </li>
-
+          <?php } ?>
         </ul>
 
       </div>
@@ -153,7 +126,7 @@
           <p>Give us your location, price and area you want we will help to find 
             the best of your choice.</p>
             <div class="submit_button">
-              <a href="#" class="submit_padding" onclick="show_popup(event,1);">Submit Request</a>
+              <a href="<?php echo base_url('home/request'); ?>" class="submit_padding colorbox-iframe">Submit Request</a>
             </div>
           </div>
 
@@ -162,7 +135,7 @@
             <p>Give us your location, price and area you want we will help to find 
               the best of your choice.</p>
               <div class="submit_button">
-                <a href="#" class="submit_padding" onclick="show_popup(event,2)">Submit Request</a>
+                <a href="<?php echo base_url('home/consult'); ?>" class="submit_padding colorbox-iframe">Submit Request</a>
               </div>
             </div>
 
@@ -171,7 +144,7 @@
               <p>Give us your location, price and area you want we will help to find 
                 the best of your choice.</p>
                 <div class="submit_button">
-                  <a href="#" class="submit_padding" onclick="show_popup(event,3)">Submit Request</a>
+                  <a  href="<?php echo base_url('home/service'); ?>" class="submit_padding colorbox-iframe">Submit Request</a>
                 </div>
               </div>
 

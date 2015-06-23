@@ -65,7 +65,7 @@ class Advertisement extends Admin_Controller {
     function edit($id) {
         $data['edit'] = $this->db->get_where('tbl_advertisement', array('id' => $id))->row();
         $data['heading'] = 'advertisement Management';
-        $data['main'] = 'advertisement/form';
+        $data['main'] = 'ads/form';
         $this->load->view('admin/home', $data);
     }
 

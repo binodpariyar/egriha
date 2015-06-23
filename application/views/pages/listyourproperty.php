@@ -49,27 +49,14 @@
 -->
 <div class="ad">
   <ul class="ads_slidertwo">
+    <?php $ads = $this->db->order_by('order')->get('tbl_advertisement')->result(); ?>
+    <?php foreach($ads as $ad){ ?>
     <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint.jpg');?>">
+      <a href="<?php echo prep_url($ad->link); ?>" target="_blank">
+        <img src="<?php echo base_url() ?>timthumb.php?h=300&w=300&q=100&src=<?php echo base_url('uploads/advertisement_image/'.$ad->image);?>">
+      </a>
     </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-    </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-    </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint4.jpg');?>">
-    </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-    </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-    </li>
-    <li>
-      <img src="<?php echo base_url('front_assets/images/asianpaint.jpg');?>">
-    </li>
+    <?php } ?>
   </ul>
 </div>
 </div>

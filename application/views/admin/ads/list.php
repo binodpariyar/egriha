@@ -15,8 +15,8 @@
                 <tr> 
                     <th>ID</th> 
                     <th>Title</th> 
-                    <th>Address</th> 
-                    <th>Image</th>
+                    <th>Image</th> 
+                    <th>Address</th>
                     <th>Action</th>
                 </tr> 
             </thead> 
@@ -27,10 +27,11 @@
 
                             <td><?php echo $s->id; ?></td> 					 
                             <td><?php echo $s->title ;?></td> 					 				 
-                            <td><?php echo $s->link ;?></td> 					 				 
-                            <td><img height="60"  width="70" src="<?php echo base_url('uploads/advertisement_image/' . $s->image); ?>"/></td> 					 				 
+                            <td><?php echo $s->link ;?></td>                                                                     
+                            <td>
+                                <img width="100px" src="<?php echo base_url('uploads/advertisement_image/'.$s->image) ;?>">
+                            </td> 					 				 				 				 
                             <td> 
-
                                 <a data-original-title="Edit Photo" href="<?php echo admin_url('advertisement/edit/' . $s->id); ?>" class="btn btn-success btn-icon tip" title="">
                                     Edit <i class="glyphicon glyphicon-pencil"></i>
                                 </a> 

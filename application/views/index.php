@@ -6,6 +6,7 @@
   <!--Stylesheets-->
   <link href="<?php echo base_url(); ?>front_assets/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="<?php echo base_url(); ?>front_assets/css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="<?php echo base_url(); ?>front_assets/css/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
   <style>
   .form-field{
     margin-bottom:10px;
@@ -19,6 +20,7 @@
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/cufon-yui.js"></script>
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/Calluna_400.font.js"></script>
   <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="<?php echo base_url(); ?>front_assets/js/jquery.colorbox.js"></script>
   <script type="text/javascript">
   Cufon.replace('h1.html');
   Cufon.replace('h2.html');
@@ -100,6 +102,11 @@
 
 
   $(document).ready(function() { 
+
+    $('a.colorbox-iframe').colorbox({
+        width:'60%',
+        height:'90%'
+      });
 
     $('#selling').bxSlider({
       minSlides: 5,
@@ -225,7 +232,7 @@
 
            <div class="form-field">
             <label for="country"><strong>To:</strong></label>
-            <select id="type"required="required">
+            <select id="type" required="required">
               <option>Buy</option>
               <option>Rent</option>
             </select>
@@ -233,7 +240,7 @@
 
           <div class="form-field">
             <label for="country"><strong>Property:</strong></label>
-            <select id="type"required="required">
+            <select id="type" required="required">
               <option>House</option>
               <option>Land</option>
               <option>Appartment</option>
@@ -244,7 +251,7 @@
 
           <div class="form-field">
             <label for="country"><strong>Area:</strong></label>
-            <select id="type"required="required">
+            <select id="type" required="required">
               <option>House</option>
               <option>Land</option>
               <option>Appartment</option>
@@ -255,7 +262,7 @@
 
           <div class="form-field">
             <label for="country"><strong>Location:</strong></label>
-            <select id="type"required="required">
+            <select id="type" required="required">
               <option>House</option>
               <option>Land</option>
               <option>Appartment</option>
@@ -266,7 +273,7 @@
 
           <div class="form-field">
             <label for="country"><strong>Price Range:</strong></label>
-            <select id="type"required="required">
+            <select id="type" required="required">
               <option>House</option>
               <option>Land</option>
               <option>Appartment</option>
@@ -372,18 +379,18 @@
             <div class="clear-both">
               <div class="margin-right">
 
-                <label>Rent:</label>
-                <select id="type"required="required">
-                  <option>Home</option>
-                  <option>Land</option>
-                  <option>Appartment</option>
+                <label>For:</label>
+                <select id="type" required="required">
+                  <option>Sell</option>
+                  <option>Rent</option>
+                  <!-- <option>Appartment</option> -->
                 </select>
 
 
 
 
-                <label>Sell:</label>
-                <select id="type"required="required">
+                <label>Of:</label>
+                <select id="type" required="required">
                  <option>Home</option>
                  <option>Land</option>
                  <option>Appartment</option>
@@ -434,6 +441,9 @@
           <li>
             <a href="<?php echo site_url('rent/appartment'); ?>">Appartment</a>
           </li>
+          <li>
+            <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
+          </li>
         </ul>
       </li>
       <li>
@@ -449,9 +459,6 @@
           </li>
           <li>
             <a href="<?php echo site_url('sell/appartment'); ?>">Appartment</a>
-          </li>
-          <li>
-            <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
           </li>
         </ul>
       </li>
@@ -593,6 +600,31 @@
 
     </div><!--Wrap ends -->
     
+    <?php $site_setting = $this->db->get('tbl_site')->row(); ?>
+    <ul class="social" id="share">
+      <li id="facebook"><a target="_blank" href="<?php echo $site_setting->facebook; ?>">Facebook</a></li>
+      <li id="twitter"><a target="_blank" href="<?php echo $site_setting->twitter; ?>">Twitter</a></li>
+      <li id="gplus"><a target="_blank" href="<?php echo $site_setting->google; ?>">Google+</a></li>
+    </ul>
+
+    <script>
+
+    $(window).scroll(function(){
+      checkScroll();
+    });
+
+    function checkScroll(){
+      if($(this).scrollTop() > 150 ){
+        $('#top').fadeIn();
+        $('#share').fadeIn();
+      }else{
+        $('#top').fadeOut();
+        $('#share').fadeOut();
+      }
+    }
+
+    </script>
+
   </body>
 <!--    <ul class="social" id="share">
   <li id="facebook"><a target="_blank" href="">Facebook</a></li>

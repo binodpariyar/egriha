@@ -7,10 +7,7 @@ class Listyourproperty extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 
-		if(!$this->ion_auth->logged_in()){
-			$data['main'] = 'pages/listyourproperty';
-			$this->load->view('index',$data);
-		}else{
+		if($this->ion_auth->logged_in()){
 			$this->user_id = $this->ion_auth->user()->row()->id;
 		}
 		
@@ -22,12 +19,13 @@ class Listyourproperty extends CI_Controller {
 		if($this->ion_auth->logged_in()){
 			$data['list'] = $this->db->where('user_id',$this->user_id)->get('tbl_property')->result();
 			$data['main'] = 'pages/listyour';
+			$this->load->view('index',$data);
 		}
 		else{
 			$data['main'] = 'pages/listyourproperty';
+			$this->load->view('index',$data);
 		}
 
-		$this->load->view('index',$data);
 	}
 
 

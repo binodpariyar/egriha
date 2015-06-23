@@ -23,7 +23,7 @@ class Slider_management extends Admin_Controller {
 
     function save() {
         $this->form_validation->set_rules('title', 'Title', 'required|trim');
-        $this->form_validation->set_rules('description', 'Description', 'required|trim');
+        // $this->form_validation->set_rules('description', 'Description', 'required|trim');
 
         if ($this->form_validation->run()) {
 
@@ -44,7 +44,7 @@ class Slider_management extends Admin_Controller {
                 redirect(admin_url('slider_management/add'));
             } else {
                 $data['title'] = $this->input->post('title');
-                $data['description'] = $this->input->post('description');
+                // $data['description'] = $this->input->post('description');
                 $data['image'] = $filename;
                 $this->db->select_max('order', 'great');
                 $res = $this->db->get('tbl_slider');
@@ -69,13 +69,13 @@ class Slider_management extends Admin_Controller {
 
     function update($id) {
         $this->form_validation->set_rules('title', 'Title', 'required|trim');
-        $this->form_validation->set_rules('description', 'Description', 'required|trim');
+        // $this->form_validation->set_rules('description', 'Description', 'required|trim');
 
         $error = $_FILES['image']['error'];
 
         if ($error == 4) {
             $data['title'] = $this->input->post('title');
-            $data['description'] = $this->input->post('description');
+            // $data['description'] = $this->input->post('description');
             $this->db->where('id', $id);
             $this->db->update('tbl_slider', $data);
             redirect(admin_url('slider_management'));
@@ -108,6 +108,14 @@ class Slider_management extends Admin_Controller {
     function delete($id) {
         $this->db->where('id', $id)->delete('tbl_slider');
         redirect(admin_url('slider_management'));
+    }
+
+     function manage_order() {
+        $order = $this->input->post('item');
+        foreach ($order as $key => $o) {
+            $this->db->where('id', $o);
+            $this->db->update('tbl_slider', array('order' => ($key + 1)));
+        }
     }
 
 }

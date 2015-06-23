@@ -50,7 +50,7 @@
 	<div id="housesell">
 		<div id="contenttwo">
 			<?php foreach ($list as $key => $row): ?>
-				
+			
 			<div class="entry-selling">
 				<a href="<?php echo base_url($this->router->fetch_class().'/description/'.$row->id); ?>">
 					<div class="entry_body">
@@ -67,62 +67,41 @@
 				</a>
 			</div>
 			
-			<?php endforeach; ?>
-
-		</div>
-	</div>
-
-	<div class="ad">
-
-		<ul class="ads_slidertwo">
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint.jpg');?>">
-
-			</li>
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-			</li>
-
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-			</li>
-
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint4.jpg');?>">
-
-			</li>
-
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint.jpg');?>">
-
-			</li>
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint2.jpg');?>">
-			</li>
-
-			<li>
-				<img src="<?php echo base_url('front_assets/images/asianpaint3.jpg');?>">
-			</li>
-
-		</ul>
+		<?php endforeach; ?>
 
 	</div>
+</div>
 
-	<script type="text/javascript">
+<div class="ad">
 
-	$(document).ready(function(){
+	<ul class="ads_slidertwo">
+		<?php $ads = $this->db->order_by('order')->get('tbl_advertisement')->result(); ?>
+		<?php foreach($ads as $ad){ ?>
+		<li>
+			<a href="<?php echo prep_url($ad->link); ?>" target="_blank">
+				<img src="<?php echo base_url() ?>timthumb.php?h=300&w=300&q=100&src=<?php echo base_url('uploads/advertisement_image/'.$ad->image);?>">
+			</a>
+		</li>
+		<?php } ?>
+	</ul>
 
-		$('.house_pic').bxSlider({
-			minSlides: 5,
-			maxSlides: 5,
-			slideWidth: 200,
-			slideMargin: 5,
-			controls:true,
-			auto : true
-		});
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('.house_pic').bxSlider({
+		minSlides: 5,
+		maxSlides: 5,
+		slideWidth: 200,
+		slideMargin: 5,
+		controls:true,
+		auto : true
 	});
+});
 
-	</script>
+</script>
 
 
 

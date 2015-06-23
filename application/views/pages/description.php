@@ -1,5 +1,3 @@
-
-
 <div id="main_secondary">
   <div class="service_wrapper">
     <div id="provide">
@@ -11,6 +9,10 @@
         <div class="entry-selling description">
 
           <div class="entry_body">
+            
+            <?php if($details->verify == 1) { ?>
+            <img class="verify" src="<?php echo base_url('front_assets/images/verify.png') ?>" alt="">
+            <?php } ?>
 
             <div class="description-slider" style="width:360px;">
 
@@ -111,6 +113,16 @@
 </ul>
 
 </div>
+
+<style>
+  img.verify {
+    height: 100px !important;
+    left: 795px;
+    position: absolute;
+    width: 100px !important;
+    z-index: 100000;
+  }
+</style>
 
 <!-- 
 <div class="ad">

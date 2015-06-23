@@ -28,12 +28,12 @@ if(isset($edit)){
                         <label for="image" class="error"><?php echo form_error('title'); ?></label>
                     </div>
                 </div>
-                
-                <div class="row" style="margin-top: 15px;">
+
+                <div class="row">
                     <div class="col-md-12">
                         <label>Link:</label> 
-                        <input name="link" class="editor" value="<?php echo (isset($edit->link))? $edit->link :set_value('link'); ?>"
-                        <label for="image" class="error"><?php echo form_error('link'); ?></label>
+                        <input type="text" value="<?php echo (isset ($edit->link)) ? $edit->link :set_value('link'); ?>" name="link" class="form-control" placeholder="Enter link"/>
+                        <label for="link" class="error"><?php echo form_error('link'); ?></label>
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@ if(isset($edit)){
                     </div>
                     <div class="col-md-12">
                     <?php if(isset($edit)){?>
-                        <img height="128px"width="250px" src="<?php echo base_url('uploads/slider_image/'.$edit->image) ;?>"/>
+                        <img height="128px" width="250px" src="<?php echo base_url('uploads/advertisement_image/'.$edit->image) ;?>" />
                     <?php } ?>
                         
                     </div>

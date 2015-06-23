@@ -10,7 +10,7 @@ class Site_management extends Admin_Controller {
 	{
 		$data['main'] = 'site/form';
 		$data['heading'] = 'Site Management';
-		$data['list']=$this->db->get('tbl_site')->row();
+		$data['edit']=$this->db->get('tbl_site')->row();
 		$this->load->view('admin/home',$data);
 	}
 
@@ -21,8 +21,8 @@ class Site_management extends Admin_Controller {
 		$data['google']=$this->input->post('google');
 		$data['twitter']=$this->input->post('twitter');
 		$data['youtube']=$this->input->post('youtube');
-
-		 $this->db->update('tbl_site', $data, "id = 1");
+		// $this->db->where()
+		 $this->db->update('tbl_site', $data);
 		 redirect(admin_url('Site_management'));
 	}
 

@@ -12,11 +12,11 @@
 	<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.min.js'; ?>"></script>
 	
 	<script>
-	var admin_url = '<?php echo admin_url() ?>';
+		var admin_url = '<?php echo admin_url() ?>';
 
-	$(document).ready(function(){
-		
-	});
+		$(document).ready(function(){
+
+		});
 
 	</script>
 
@@ -50,84 +50,43 @@
 						<a href="<?php echo admin_url(); ?>">
 							Dashboard
 						</a>
-					</li>
-					
-							<li>
-								<a href="<?php echo admin_url('slider_management'); ?>">
-									Slider
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo admin_url('about'); ?>">
-									About Us
-								</a>
-							</li>
-
-							<li>
-								<a href="<?php echo admin_url('project'); ?>">
-									Project Management
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo admin_url('advertisement'); ?>">
-									Advertisements
-								</a>
-							</li>
-							
-							<li>
-								<a href="<?php echo admin_url('site_management'); ?>">
-									Site Management
-								</a>
-							</li>
-							<!-- <li>
-								<a href="<?php echo admin_url('welcome_message'); ?>">
-									Welcome Message
-								</a>
-							</li>
-
-							<li>
-								<a href="<?php echo admin_url('basthu'); ?>">
-									Basthu
-								</a>
-							</li>
-							<li>
-								<a href="<?php echo admin_url('anti'); ?>">
-									Anit Earthquack
-								</a>
-							</li>
- -->
-						
-					
-					
-
-					<!-- <li>
-						<a href="<?php echo admin_url('class_management'); ?>">
-							Class Management
+					</li>					
+					<li>
+						<a href="<?php echo admin_url('slider_management'); ?>">
+							Slider
 						</a>
 					</li>
 					<li>
-						<a href="<?php echo admin_url('certificate'); ?>">
-							Certificates
+						<a href="<?php echo admin_url('about'); ?>">
+							About Us
 						</a>
 					</li>
 					<li>
-						<a href="<?php echo admin_url('news'); ?>">
-							News
-						</a>
-					</li>
-					
-					<li>
-						<a href="<?php echo admin_url('abroad'); ?>">
-							Abroad
+						<a href="<?php echo admin_url('about/vastushastra'); ?>">
+							Vastushastra
 						</a>
 					</li>
 					<li>
-						<a href="<?php echo admin_url('poll_management'); ?>">
-							Poll
+						<a href="<?php echo admin_url('about/construction'); ?>">
+							Construction
 						</a>
 					</li>
-					 -->
-					 <li>
+					<li>
+						<a href="<?php echo admin_url('project'); ?>">
+							Project Management
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo admin_url('advertisement'); ?>">
+							Advertisements
+						</a>
+					</li>					
+					<li>
+						<a href="<?php echo admin_url('site_management'); ?>">
+							Site Management
+						</a>
+					</li>
+					<li>
 						<a href="<?php echo admin_url('client_management'); ?>">
 							Client Management
 						</a>

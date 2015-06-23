@@ -15,7 +15,7 @@
                 <tr> 
                     <th>ID</th> 
                     <th>Title</th> 
-                    <th>Description</th> 
+                    <!-- <th>Description</th> -->
                     <th>Image</th>
                     <th>Action</th>
                 </tr> 
@@ -27,8 +27,10 @@
 
                             <td><?php echo $s->id; ?></td> 					 
                             <td><?php echo $s->title ;?></td> 					 				 
-                            <td><?php echo $s->description ;?></td> 					 				 
-                            <td><img height="60"  width="70" src="<?php echo base_url('uploads/slider_image/' . $s->image); ?>"/></td> 					 				 
+                            <!-- <td><?php echo $s->description ;?></td>					 				  -->
+                            <td>
+                                <img height="60" width="70" src="<?php echo base_url('uploads/slider_image/'.$s->image); ?>" />
+                            </td> 					 				 
                             <td> 
 
                                 <a data-original-title="Edit Photo" href="<?php echo admin_url('slider_management/edit/' . $s->id); ?>" class="btn btn-success btn-icon tip" title="">
@@ -74,7 +76,7 @@
                 $.ajax({
                     data: data,
                     type: 'POST',
-                    url: admin_url+'/slider_management/manage_order',
+                    url: admin_url+'slider_management/manage_order',
                     success:function(){
 //                        window.location.reload();
                     }
