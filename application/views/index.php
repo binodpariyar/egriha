@@ -209,11 +209,11 @@
 
     $('a.colorbox-iframe').colorbox({
 
-        width:'60%',
+      width:'60%',
 
-        height:'90%'
+      height:'90%'
 
-      });
+    });
 
 
     $('#selling').bxSlider({
@@ -336,43 +336,43 @@
 
 });
 
-  </script>
+</script>
 
-  <script src="<?php echo base_url(); ?>front_assets/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url(); ?>front_assets/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 
-  <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
 
-  $(document).ready(function(){
+$(document).ready(function(){
 
-   $("a[rel^='prettyPhoto']").prettyPhoto({
+ $("a[rel^='prettyPhoto']").prettyPhoto({
 
-    animationSpeed: 'normal', /* fast/slow/normal */
+  animationSpeed: 'normal', /* fast/slow/normal */
 
-    padding: 40, /* padding for each side of the picture */
+  padding: 40, /* padding for each side of the picture */
 
-    opacity: 0.35, /* Value betwee 0 and 1 */
+  opacity: 0.35, /* Value betwee 0 and 1 */
 
-    showTitle: true, /* true/false */
+  showTitle: true, /* true/false */
 
-    allowresize: true, /* true/false */
+  allowresize: true, /* true/false */
 
-    counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+  counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
 
-    theme: 'light_rounded', /* light_rounded / dark_rounded / light_square / dark_square */
+  theme: 'light_rounded', /* light_rounded / dark_rounded / light_square / dark_square */
 
-    hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
+  hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
 
-    modal: false, /* If set to true, only the close button will close the window */
+  modal: false, /* If set to true, only the close button will close the window */
 
-    changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
+  changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
 
-    callback: function(){} /* Called when prettyPhoto is closed */
+  callback: function(){} /* Called when prettyPhoto is closed */
 
-  });
+});
 
- });
+});
 
-  </script>
+</script>
 
 
 
@@ -396,516 +396,160 @@
 
 <body>
 
-  <div class="overlay">
 
-    <div class="popup">
+  <div id="fb-root"></div>
 
-      <div id="content_form"><!-- Content Starts -->
+  <script>(function(d, s, id) {
 
-        <h2>Fill the form below we will help you out <a class="closebutton" href="#" onclick="hide_popup(1)">x</a> </h2>
+    var js, fjs = d.getElementsByTagName(s)[0];
 
+    if (d.getElementById(id)) return;
 
+    js = d.createElement(s); js.id = id;
 
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
 
+    fjs.parentNode.insertBefore(js, fjs);
 
-        <div class="entry">
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-          <div class="entry_top"><!--top design --></div>
+  <div id="wrap"><!-- Start wrap -->
 
-          <div class="entry_body">
+    <div id="header"><!-- Header Starts -->
 
+     <h1><a href="<?php echo site_url(); ?>"></a></h1>
+     <fieldset class="top-info">
+      <div class="float-right">
+        <ul>
+          <li><a href="<?php echo site_url('home');?>">Home</a> | </li>
+          <li><?php if(!$this->ion_auth->logged_in()) {?> <a href="<?php echo site_url('login');?>">Login</a> | <?php }else{ ?> <a href="<?php echo site_url('login/log_out');?>">Log Out</a> | <?php } ?> </li>
+          <li><a href="<?php echo site_url('signup');?>">Sign Up</a></li>
+        </ul>
 
+        <p>
+          Company Address : Tinkune, Kathmandu</br>
+          Phone : 9851183984,9841641971,9849425098</br>
+          Email ID : something@yahoo.com
+        </p>
 
+      </div> 
 
+      <div class="clear-both">
 
-           <form method="post" action="<?php echo base_url('signup/add') ?>" id="contactform">
+        <div class="margin-right">
+          <label>For:</label>
+          <select id="type" required="required">
+            <option>Sell</option>
+            <option>Rent</option>
+          </select>
 
+          <label>Of:</label>
 
+          <select id="type" required="required">
+           <option>Home</option>
+           <option>Land</option>
+           <option>Appartment</option>
+           <option>Flat</option>
+         </select>
 
+         <input type="submit" class="searchBtn" value="" />
+       </div>
+     </div>
 
-
-            <div>
-
-             <label for="firstname"><strong>First Name:</strong></label>
-
-             <input type="text" size="50" name="first_name" id="firstname" required="required"  />
-
-           </div>
-
-           <div>
-
-             <label for="email"><strong>Email:</strong></label>
-
-             <input type="email" size="50" name="email" id="email" value="" required="required" />
-
-           </div>
-
-           <div>
-
-             <label for="address"><strong>Address:</strong></label>
-
-             <input type="text" size="50" name="address" id="address" value="" required="required" />
-
-           </div>
-
-
-
-           <div>
-
-             <label for="mobile"><strong>Mobile:</strong></label>
-
-             <input type="text" size="50" name="mobile" id="mobile" value="" required="required" />
-
-           </div>
-
-
-
-           <div class="form-field">
-
-            <label for="country"><strong>To:</strong></label>
-            <select id="type" required="required">
-              <option>Buy</option>
-
-              <option>Rent</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="form-field">
-
-            <label for="country"><strong>Property:</strong></label>
-
-            <select id="type" required="required">
-              <option>House</option>
-
-              <option>Land</option>
-
-              <option>Appartment</option>
-
-              <option>Flat</option>
-
-              <option>Other Specify</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="form-field">
-
-            <label for="country"><strong>Area:</strong></label>
-
-            <select id="type" required="required">
-              <option>House</option>
-
-              <option>Land</option>
-
-              <option>Appartment</option>
-
-              <option>Flat</option>
-
-              <option>Other Specify</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="form-field">
-
-            <label for="country"><strong>Location:</strong></label>
-
-            <select id="type" required="required">
-
-              <option>House</option>
-
-              <option>Land</option>
-
-              <option>Appartment</option>
-
-              <option>Flat</option>
-
-              <option>Other Specify</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div class="form-field">
-
-            <label for="country"><strong>Price Range:</strong></label>
-            <select id="type" required="required">
-              <option>House</option>
-
-              <option>Land</option>
-
-              <option>Appartment</option>
-
-              <option>Flat</option>
-
-              <option>Other Specify</option>
-
-            </select>
-
-          </div>
-
-
-
-          <div>
-
-           <label for="description"><strong>Other Description:</strong></label>
-
-           <textarea rows="5" cols="50" name="description" id="description" class="required"></textarea>
-
-         </div>
-
-
-
-         <div style="margin-top:10px;">
-
-           <input type="submit" class="submit" value="Submit" name="Submit" />
-
-         </div>
-
-
-
-       </form>
-
-     </div><!-- entry body ends -->
-
-
-
-
-
-
-
-     <div class="entry_bottom"><!-- bottom design --></div>
-
-
-
-   </div>
-
-
-
-
+   </fieldset>
 
  </div>
 
+ <div id="nav">
 
+   <ul>
 
-</div>
+    <li>
 
-</div>
+      <a <?php if($main == 'pages/home') { echo 'class="nav_current"'; } ?> href="<?php echo site_url(); ?>">
 
+        Home
 
+      </a>
 
+    </li>
 
+    <li>
 
+      <a <?php if($this->router->fetch_class() == 'rent') { echo 'class="nav_current"'; } ?> href="javascript:void(0);">
 
+        For Rent
 
-
-
-
-
-<div class="overlay-two">
-
-  <div class="popup-two">
-
-    <div id="content_form"><!-- Content Starts -->
-
-      <h3>We will give you service from first to last so...<a class="closebutton" href="#" onclick="hide_popup(3)">x</a></h3>
-
-      <h3>Contact now: 9841237899/ 0140000 </h3>
-
-      
-
-    </div>
-
-
-
-
-
-
-
-
-
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="fb-root"></div>
-
-<script>(function(d, s, id) {
-
-  var js, fjs = d.getElementsByTagName(s)[0];
-
-  if (d.getElementById(id)) return;
-
-  js = d.createElement(s); js.id = id;
-
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-
-  fjs.parentNode.insertBefore(js, fjs);
-
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="wrap"><!-- Start wrap -->
-
-  <div id="header"><!-- Header Starts -->
-
-   <h1><a href="home"></a></h1><!-- Logo -->
-
-
-
-
-
-   <fieldset class="top-info">
-
-    <div class="float-right">
+      </a>
 
       <ul>
 
-        <li><a href="<?php echo site_url('home');?>">Home</a> | <li>
+        <li>
 
+          <a  href="<?php echo site_url('rent/home'); ?>">Home</a>
 
+        </li>
 
-          <li>
+        <li>
 
+          <a href="<?php echo site_url('rent/land'); ?>">Land</a>
 
+        </li>
 
-            <?php if(!$this->ion_auth->logged_in()) {?>
+        <li>
 
-            <a href="<?php echo site_url('login');?>">Login</a> | 
+          <a href="<?php echo site_url('rent/appartment'); ?>">Appartment</a>
 
-            <?php }else{ ?>
+        </li>
 
+        <li>
 
+          <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
 
-            <a href="<?php echo site_url('login/log_out');?>">Log Out</a> |
+        </li>
 
+      </ul>
 
+    </li>
 
+    <li>
 
+      <a <?php if($this->router->fetch_class() == 'sell') { echo 'class="nav_current"'; } ?> href="javascript:void(0);">
 
-            <?php } ?>
+        For Sell
 
+      </a>
 
+      <ul>
 
+        <li>
 
+          <a href="<?php echo site_url('sell/home'); ?>">Home</a>
 
-            <li>
+        </li>
 
-              <li><a href="<?php echo site_url('signup');?>">Sign Up</a><li>
+        <li>
 
-              </ul>
+          <a href="<?php echo site_url('sell/land'); ?>">Land</a>
 
+        </li>
 
+        <li>
 
-              <p>
+          <a href="<?php echo site_url('sell/appartment'); ?>">Appartment</a>
 
-                Company Address : Tinkune, Kathmandu</br>
+        </li>
+      </ul>
 
-                Phone : 9851183984,9841641971,9849425098</br>
+    </li>
 
-                Email ID : something@yahoo.com
+    <li>
 
-              </p> 
+      <a <?php if($main == 'pages/listyourproperty') { echo 'class="nav_current"'; } ?> href="<?php echo site_url('listyourproperty'); ?>">
 
+        List your
 
-
-            </div> 
-
-
-
-            
-
-            
-
-            <div class="clear-both">
-
-              <div class="margin-right">
-                <label>For:</label>
-                <select id="type" required="required">
-                  <option>Sell</option>
-                  <option>Rent</option>
-                </select>
-
-                <label>Of:</label>
-
-                <select id="type" required="required">
-                 <option>Home</option>
-
-                 <option>Land</option>
-
-                 <option>Appartment</option>
-
-                 <option>Flat</option>
-
-                 
-
-               </select>
-
-
-
-
-
-<!-- 
-
-            <label>Land:</label>
-
-            <select id="type"required="required">
-
-               <option>Home</option>
-
-              <option>Land</option>
-
-              <option>Appartment</option>
-
-              <option>Flat</option>
-
-            </select> -->
-
-
-
-            <input type="submit" class="searchBtn" value="" />
-
-
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-
-
-
-
-      </fieldset>
-
-      
-
-    </div><!-- Header ends -->
-
-    <div id="nav">
-
-     <ul>
-
-      <li>
-
-        <a <?php if($main == 'pages/home') { echo 'class="nav_current"'; } ?> href="<?php echo site_url(); ?>">
-
-          Home
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a <?php if($this->router->fetch_class() == 'rent') { echo 'class="nav_current"'; } ?> href="javascript:void(0);">
-
-          For Rent
-
-        </a>
-
-        <ul>
-
-          <li>
-
-            <a  href="<?php echo site_url('rent/home'); ?>">Home</a>
-
-          </li>
-
-          <li>
-
-            <a href="<?php echo site_url('rent/land'); ?>">Land</a>
-
-          </li>
-
-          <li>
-
-            <a href="<?php echo site_url('rent/appartment'); ?>">Appartment</a>
-
-          </li>
-
-          <li>
-
-            <a href="<?php echo site_url('sell/flat'); ?>">Flat</a>
-
-          </li>
-
-        </ul>
-
-      </li>
-
-      <li>
-
-        <a <?php if($this->router->fetch_class() == 'sell') { echo 'class="nav_current"'; } ?> href="javascript:void(0);">
-
-          For Sell
-
-        </a>
-
-        <ul>
-
-          <li>
-
-            <a href="<?php echo site_url('sell/home'); ?>">Home</a>
-
-          </li>
-
-          <li>
-
-            <a href="<?php echo site_url('sell/land'); ?>">Land</a>
-
-          </li>
-
-          <li>
-
-            <a href="<?php echo site_url('sell/appartment'); ?>">Appartment</a>
-
-          </li>
-        </ul>
-
-      </li>
-
-      <li>
-
-        <a <?php if($main == 'pages/listyourproperty') { echo 'class="nav_current"'; } ?> href="<?php echo site_url('listyourproperty'); ?>">
-
-          List your
-
-          property</a>
+        property</a>
 
        <!--      <ul>
 
@@ -968,7 +612,7 @@
 
           <li>
 
-            <a <?php if($main == 'pages/calculator') { echo 'class="nav_current"'; } ?> href="#">
+            <a class="colorbox-iframe <?php if($main == 'pages/calculator') { echo 'nav_current'; } ?>  " href="<?php echo site_url('calculator'); ?>">
 
               Calculator
 
@@ -1002,7 +646,7 @@
 
           <li>
 
-            <a <?php if($main == 'pages/aboutus') { echo 'class="nav_current"'; } ?> href="<?php echo site_url('aboutus'); ?>">
+            <a <?php if($main == 'pages/aboutus') { echo 'class="nav_current"'; } ?> href="<?php echo site_url('content/about-us'); ?>">
 
               About us
 
@@ -1056,20 +700,15 @@
 
           <div class="oneforth">
 
-            <h3 style="
-
-            color: #FFF">Real State</h3>
+            <h3 style="color: #FFF">Sell</h3>
 
             <ul>
 
-              <li><a href="#">Browse All Land</a></li>
+              <li><a href="<?php echo site_url('sell/land'); ?>">Browse All Land</a></li>
 
-              <li><a href="#">Browse All Home</a></li>
+              <li><a href="<?php echo site_url('sell/home'); ?>">Browse All Home</a></li>
 
-              <li><a href="#">Browse All Apartment</a></li>
-
-
-
+              <li><a href="<?php echo site_url('sell/appartment'); ?>">Browse All Apartment</a></li>
 
 
             </ul>             
@@ -1078,21 +717,15 @@
 
           <div class="oneforth">
 
-            <h3 style="
-
-            color: #FFF;" >Rent</h3>
+            <h3 style="color: #FFF;" >Rent</h3>
 
             <ul>
 
-              <li><a href="#">Browse All Land</a></li>
+              <li><a href="<?php echo site_url('rent/land'); ?>">Browse All Land</a></li>
 
-              <li><a href="#">Browse All Home</a></li>
+              <li><a href="<?php echo site_url('rent/home'); ?>">Browse All Home</a></li>
 
-              <li><a href="#">Browse All Apartment</a></li>
-
-
-
-
+              <li><a href="<?php echo site_url('rent/appartment'); ?>">Browse All Apartment</a></li>
 
             </ul>             
 
@@ -1110,12 +743,6 @@
 
               <li><a href="#">Construction Company</a></li>
 
-
-
-
-
-
-
             </ul>
 
           </div>
@@ -1126,15 +753,11 @@
 
             <ul>
 
-              <li><a href="#">Home</a></li>
+              <li><a href="<?php echo site_url(); ?>">Home</a></li>
 
-              <li><a href="#">Calculator</a></li>
+              <li><a class="colorbox-iframe" href="<?php echo site_url('calculator'); ?>">Calculator</a></li>
 
-              <li><a href="#">Contact us</a></li>
-
-
-
-
+              <li><a href="<?php echo site_url('contact'); ?>">Contact us</a></li>
 
             </ul>
 

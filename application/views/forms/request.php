@@ -1,8 +1,11 @@
 <style>
-  select{
-    width: 80%;
-    padding: 5px;
-  }
+select{
+  width: 80%;
+  padding: 5px;
+}
+.house_show{
+  display: none;
+}
 </style>
 <div id="content_form">
   <h2>Fill the form below we will help you out</h2>
@@ -49,7 +52,7 @@
 
       <label for="country"><strong>To:</strong></label>
 
-      <select id="type" required="required">
+      <select id="to" required="required">
 
         <option>Buy</option>
 
@@ -65,17 +68,17 @@
 
       <label for="country"><strong>Property:</strong></label>
 
-      <select id="type" required="required">
+      <select id="prop_type" name="type" required="required">
 
-        <option>House</option>
+        <option value="House">House</option>
 
-        <option>Land</option>
+        <option value="Land">Land</option>
 
-        <option>Appartment</option>
+        <option value="Appartment">Appartment</option>
 
-        <option>Flat</option>
+        <option value="Flat">Flat</option>
 
-        <option>Other Specify</option>
+        <option value="Other Specify">Other Specify</option>
 
       </select>
 
@@ -88,20 +91,6 @@
       <label for="country"><strong>Area:</strong></label>
 
       <input type="text" size="50" name="area" id="area" value="" required="required" />
-
-<!--       <select id="type" required="required">
-
-        <option>House</option>
-
-        <option>Land</option>
-
-        <option>Appartment</option>
-
-        <option>Flat</option>
-
-        <option>Other Specify</option>
-
-      </select> -->
 
     </div>
 
@@ -121,7 +110,7 @@
 
       <label for="country"><strong>Price Range:</strong></label>
 
-      <select id="type" required="required">
+      <select id="range" required="required">
 
         <option value="Below 10,00,000">Below 10,00,000</option>
 
@@ -134,6 +123,33 @@
         <option value="Above 1,00,00,000">Above 1,00,00,000</option>
 
       </select>
+
+    </div>
+
+
+    <div class="house_show">
+
+      <label for="country"><strong>No of Bedroom:</strong></label>
+
+      <input type="number" name="bedroom" id="bedroom" />
+
+    </div>
+
+
+    <div class="house_show">
+
+      <label for="country"><strong>No of WC:</strong></label>
+
+      <input type="number" name="wc" id="wc" />
+
+    </div>
+
+
+    <div class="house_show">
+
+      <label for="country"><strong>Storey:</strong></label>
+
+      <input type="number" name="storey" id="storey" />
 
     </div>
 
@@ -159,4 +175,17 @@
 
 </div>
 
+<script>
 
+$('#prop_type option').click(function(){
+  check_prop();
+});
+
+function check_prop(){
+  if($('#prop_type').val() == 'House'){
+    $('.house_show').show();
+  }else{
+    $('.house_show').hide();
+  }
+}
+</script>
