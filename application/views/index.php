@@ -427,9 +427,9 @@ $(document).ready(function(){
         </ul>
 
         <p>
-          Company Address : Tinkune, Kathmandu</br>
+          Company Address : Munibhairavmarg,Tinkune</br>
           Phone : 9851183984,9841641971,9849425098</br>
-          Email ID : something@yahoo.com
+          Email ID : egrihanepal@gmail.com
         </p>
 
       </div> 
