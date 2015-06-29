@@ -29,7 +29,7 @@
                             <td><?php echo $s->title ;?></td> 					 				 
                             <td><?php echo $s->link ;?></td>                                                                     
                             <td>
-                                <img width="100px" src="<?php echo base_url('uploads/advertisement_image/'.$s->image) ;?>">
+                                <img width="100px" src="<?php echo base_url('uploads/patners_image/'.$s->image) ;?>">
                             </td> 					 				 				 				 
                             <td> 
                                 <a data-original-title="Edit Photo" href="<?php echo admin_url('advertisement/edit/' . $s->id); ?>" class="btn btn-success btn-icon tip" title="">

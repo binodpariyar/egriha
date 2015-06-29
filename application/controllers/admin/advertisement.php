@@ -31,7 +31,7 @@ class Advertisement extends Admin_Controller {
 
             $ext = array_pop(explode('.', $_FILES["image"]["name"]));
 
-            $config['upload_path'] = './uploads/advertisement_image/';
+            $config['upload_path'] = './uploads/patners_image/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';
             $config['max_size'] = '200000';
 
@@ -86,7 +86,7 @@ class Advertisement extends Admin_Controller {
             $filename = random_string() . '.' . $ext;
 
             $config['file_name'] = $filename;
-            $config['upload_path'] = './uploads/advertisement_image/';
+            $config['upload_path'] = './uploads/patners_image/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';
             $config['max_size'] = '200000';
 

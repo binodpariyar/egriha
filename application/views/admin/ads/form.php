@@ -46,7 +46,7 @@ if(isset($edit)){
                     </div>
                     <div class="col-md-12">
                     <?php if(isset($edit)){?>
-                        <img height="128px" width="250px" src="<?php echo base_url('uploads/advertisement_image/'.$edit->image) ;?>" />
+                        <img height="128px" width="250px" src="<?php echo base_url('uploads/patners_image/'.$edit->image) ;?>" />
                     <?php } ?>
                         
                     </div>

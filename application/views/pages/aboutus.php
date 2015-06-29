@@ -33,7 +33,7 @@
           <?php foreach($ads as $ad){ ?>
           <li>
             <a href="<?php echo prep_url($ad->link); ?>" target="_blank">
-              <img src="<?php echo base_url() ?>timthumb.php?h=300&w=300&q=100&src=<?php echo base_url('uploads/advertisement_image/'.$ad->image);?>">
+              <img src="<?php echo base_url() ?>timthumb.php?h=300&w=300&q=100&src=<?php echo base_url('uploads/patners_image/'.$ad->image);?>">
             </a>
           </li>
           <?php } ?>
