@@ -29,10 +29,8 @@
           </div>
           <!-- content ends -->
           <div id="youtube">
-           <iframe src="https://www.youtube.com/embed/zXBeNV3oliU" frameborder="0" allowfullscreen="" style="
-           width: 100%;
-           height: 100%;
-           "></iframe>
+            <?php $site_setting = $this->db->get('tbl_site')->row(); ?>
+           <?php echo $site_setting->youtube; ?>
          </div>
        </div>
 

@@ -24,7 +24,7 @@
 	 <p class="form-group">
 	 	
 	 	<label>Youtube:</label>
-	 	<input class="form-control" name="youtube" value="<?php echo $edit->youtube ?>">
+	 	<input class="form-control" name="youtube" value="<?php echo htmlentities($edit->youtube); ?>">
 
 
 	 </p>
